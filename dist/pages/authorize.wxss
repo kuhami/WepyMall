@@ -1,0 +1,22 @@
+page {
+  height: 100%;
+}
+.authorize-contianer {
+  height: 100%;
+  background: #fff;
+  text-align: center;
+  padding-top: 100rpx;
+}
+.authorize-contianer .authorize-icon {
+  width: 128rpx;
+  height: 128rpx;
+  display: block;
+  margin: 0 auto;
+  padding-bottom: 10rpx;
+}
+.authorize-contianer .auth-item {
+  padding: 5rpx 0;
+}
+.authorize-contianer .btn-authorize {
+  margin: 100rpx 50rpx;
+}

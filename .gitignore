@@ -3,3 +3,4 @@
 # phpstorm project files
 .idea
 .DS_STORE
+node_modules

@@ -1,0 +1,87 @@
+
+  <view class="info">
+    <view class="header">
+      <view class="header_content">
+        <image class="avatarUrl" src="{{avatarUrl}}"/>
+        <view class="nickName cfff">{{nickName}}</view>
+      </view>
+    </view>
+    <view class="info_block">
+
+      <!--<navigator class="item" url="/pages/collection?type=1"> 原来的代码-->
+        <!--<view class="item_content">-->
+          <!--<image class="item_img" src="../images/icon_my_05.png"></image>-->
+          <!--<view class="text">我的收藏</view>-->
+        <!--</view>-->
+        <!--<view class="weui-cell__ft weui-cell__ft_in-access"></view>-->
+      <!--</navigator>-->
+
+      <view class="weui-cells weui-cells_after-title">
+        <navigator class="item" url="/pages/register"  wx:if="{{bShowBind}}">
+          <view>
+            <view class="item_content">
+              <image class="item_img" src="../images/icon_my_01.png"/>
+              <view class="text" style="color:#fe2a2a">绑定手机号</view>
+            </view>
+            <view class="tip">绑定手机号可更好的让我们服务好您！</view>
+          </view>
+          <view class="weui-cell__ft weui-cell__ft_in-access"/>
+        </navigator>
+        <navigator url="/pages/order" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+          <view class="weui-cell__hd">
+            <image src="../images/icon_my_02.png" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"/>
+          </view>
+          <view class="weui-cell__bd">全部订单</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access"/>
+        </navigator>
+        <navigator url="/pages/reorder" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+          <view class="weui-cell__hd">
+            <image src="../images/icon_my_02.png" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"/>
+          </view>
+          <view class="weui-cell__bd">补货订单</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access"/>
+        </navigator>
+        <navigator url="/pages/points" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+          <view class="weui-cell__hd">
+            <image src="../images/icon_my_03.png" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"/>
+          </view>
+          <view class="weui-cell__bd">我的积分</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access"/>
+        </navigator>
+        <navigator url="/pages/collection?type=0" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+          <view class="weui-cell__hd">
+            <image src="../images/icon_my_04.png" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"/>
+          </view>
+          <view class="weui-cell__bd">我的足迹</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access"/>
+        </navigator>
+        <navigator url="/pages/collection?type=1" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+          <view class="weui-cell__hd">
+            <image src="../images/icon_my_05.png" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"/>
+          </view>
+          <view class="weui-cell__bd">我的收藏</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access"/>
+        </navigator>
+      </view>
+    </view>
+
+
+    <view class="info_block">
+      <view class="weui-cells weui-cells_after-title">
+        <navigator url="/pages/messages" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+          <view class="weui-cell__hd">
+            <image src="../images/icon_my_06.png" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"/>
+          </view>
+          <view class="weui-cell__bd">我的消息</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access"/>
+        </navigator>
+        <navigator url="/pages/setting" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+          <view class="weui-cell__hd">
+            <image src="../images/icon_my_07.png" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"/>
+          </view>
+          <view class="weui-cell__bd">设置</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access"/>
+        </navigator>
+      </view>
+    </view>
+  </view>

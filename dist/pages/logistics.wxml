@@ -1,0 +1,39 @@
+
+  <view class="top-sec">
+    <view class="img_box">
+      <image src=""/>
+    </view>
+    <view class="a-row">
+      <view class="label">{{expresses.exName}}</view>
+      <view class="text">运单号:{{orderExpress.expressNo}}</view>
+    </view>
+  </view>
+  <view class="sec-wrap">
+    <view class="exp_box">
+      <view class="state">已发货</view>
+      <view class="dot"/>
+      <view class="address">{{orderExpress.departLocation}}</view>
+    </view>
+    <view class="exp_box"  wx:if="{{orderExpress.status==1}}">
+      <view class="state">运输中</view>
+      <view class="dot"/>
+    </view>
+
+    <view class="exp_box">
+      <view class="state">派件中</view>
+      <view class="dot"/>
+    </view>
+    <view class="exp_box">
+      <view class="state_active">签收</view>
+      <view class="dot_active"/>
+    </view>
+  </view>
+  <view class="state_detail"  wx:for="{{list}}" wx:key="item">
+    <view class="time">
+
+      <view class="days">{{item.updateTime}}</view>
+    </view>
+    <view class="state_detail_content">
+      <view class="text active">{{item.flowName}}</view>
+    </view>
+  </view>
