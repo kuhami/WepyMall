@@ -89,6 +89,7 @@
 <script>
 import wepy from 'wepy';
 import api from '@/api/api';
+import tip from '@/utils/tip'
 import {
   USER_INFO,USER_SPECICAL_INFO
 } from '@/utils/constant';
@@ -103,11 +104,12 @@ export default class Index extends wepy.page {
   data = {
     avatarUrl: "",
     nickName: "",
-    bShowBind:true,//判断是否绑定手机号
+    bShowBind:false,//判断是否绑定手机号
   }
   async getUserInfo(phone,code) {
     let that = this;
     let userSpecialInfo = wepy.getStorageSync(USER_SPECICAL_INFO) || {};
+    console.log(userSpecialInfo)
     let openId = userSpecialInfo.openid;
     const json = await api.getUserInfo({
       query: {
@@ -116,7 +118,7 @@ export default class Index extends wepy.page {
     });
     console.log(json)
     if (json.data.code == 0) {
-      if (json.data.user.mobile.length>0) {
+      if (json.data.user&&json.data.user.mobile.length>0) {
         this.bShowBind=false;
       } else {
         this.bShowBind = true;
