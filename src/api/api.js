@@ -174,7 +174,6 @@ export default {
   getUserAddress,
   saveAddress,
   receiverInfoById,
-  getUserAddress,
   addSearchKeyword,
   searchKeywordList,
   clearSearchKeyword,

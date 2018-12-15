@@ -50,7 +50,7 @@ export default class Messages extends wepy.page {
     placeholder: Placeholder
   }
   data = {
-    list: [],
+    list: [{title:'11',roundup:'12',detail:'121212',createTime:'2018-12-12'}],
     winHeight: 0,
     //当前页面
     currentPage: 1,
@@ -74,13 +74,14 @@ export default class Messages extends wepy.page {
         size: size || 10
       }
     });
-    if (json.data.code == 0) {
-      that.list = [...that.list, ...json.data.list];
-      that.page_total = json.data.page_total;
-      if (json.data.page_total == 0) {
-        //暂无数据
-         that.is_empty = true;
-      }
+//     if (json.data.code == 0) {
+       if(true){
+      that.list = [...that.list,{title:'wepy',roundup:'商城',detail:'恭喜你来到wepy商城',createTime:'2018-12-12'}];
+      that.page_total = json.data.page_total || 1;
+//      if (json.data.page_total == 0) {
+//        //暂无数据
+//         that.is_empty = true;
+//      }
     } else {
       tip.error(json.data.msg)
     }
