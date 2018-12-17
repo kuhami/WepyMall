@@ -16,10 +16,11 @@
   align-items: center;
 }
 .list_header .time {
-  color: #000;
+  color: #666;
+  margin-left: 10rpx;
 }
 .list_header .doc {
-  color: #000;
+  color: #666;
   margin-left: 10rpx;
 }
 .list_content {
