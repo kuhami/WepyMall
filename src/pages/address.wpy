@@ -42,7 +42,7 @@ export default class Address extends wepy.page {
         openId: openId
       }
     });
-
+    console.log(json)
     if (json.data.code == 0) {
       this.addressList=json.data.list;
       this.$invoke("addressList","refreshList", this.addressList);

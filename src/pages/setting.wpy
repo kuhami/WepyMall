@@ -81,7 +81,6 @@ export default class Messages extends wepy.page {
 //      this.userInfo=json.data.user;
       this.userInfo={nickName:'Mrs.liu',mobile:'136****4531'}
       console.log(json,"===================")
-      console.log(that.userInfo);
       that.$apply();
     } else {
       tip.error(json.data.msg)
