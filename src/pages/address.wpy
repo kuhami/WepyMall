@@ -92,6 +92,7 @@ export default class Address extends wepy.page {
   }
   methods = {
     getCurrentPage(cur,id) {
+      console.log(cur, id)
       this.currentPage = cur;
       if (cur!=1&&cur!=0) {
         this.receiverInf(id);

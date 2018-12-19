@@ -35,7 +35,7 @@ import tip from '@/utils/tip'
 export default class HomeDetail extends wepy.page {
   config = {
     navigationBarTitleText: '',
-    enablePullDownRefresh: true,//全局配置下拉刷新
+    enablePullDownRefresh: true,//单页面配置下拉刷新
   }
   data = {
     catCode: "",
