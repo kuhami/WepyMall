@@ -90,6 +90,7 @@ export default class HomeDetail extends wepy.page {
   }
 
   onLoad(option) {
+    console.log(option)
     this.cate={};
     this.list = [];
     this.skuval = "";
